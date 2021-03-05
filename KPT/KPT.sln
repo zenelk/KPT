@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPTDomain", "KPTDomain\KPTDomain.csproj", "{81BC5AE9-37F6-456C-81EE-95EE6BF71344}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "KPTDomain\Domain.csproj", "{81BC5AE9-37F6-456C-81EE-95EE6BF71344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPTDomainTests", "..\KPTDomainTests\KPTDomainTests\KPTDomainTests.csproj", "{5EE3763D-75D0-4CFB-9185-762C78300289}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainTests", "..\KPTDomainTests\KPTDomainTests\DomainTests.csproj", "{5EE3763D-75D0-4CFB-9185-762C78300289}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

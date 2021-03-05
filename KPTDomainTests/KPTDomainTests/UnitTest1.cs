@@ -1,18 +1,20 @@
+using Domain;
 using NUnit.Framework;
 
-namespace KPTDomainTests
+namespace DomainTests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void Test_GivenBlankCache_WhenRecordAdded_ThenCacheContainsRecord()
         {
-            Assert.Pass();
+            var cache = new Cache();
+            var domain = new Domain.Domain(cache);
+
+            var record = new Record();
+            domain.AddRecord(record);
+
+            Assert.That(cache.Contains(record));
         }
     }
 }
