@@ -1,20 +1,38 @@
-﻿using System;
-using Domain;
+﻿#nullable enable
+
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Domain
 {
-    public struct Domain
+    public class Domain
     {
-        public readonly Cache Cache;
+        private List<Record> _cache = new();
 
-        public Domain(Cache cache)
+        public void AddRecord(Record record)
         {
-            Cache = cache;
+            _cache.Add(record);
         }
 
-        public void AddRecord(Record @record)
+        public void MarkKanjiComplete()
         {
-            Cache.Add(record);
+            _cache.RemoveAt(0);
         }
+
+        public char? NextKanji()
+        {
+            return _cache.FirstOrDefault()?.Kanji.FirstOrDefault();
+        }
+    }
+
+    public class Record
+    {
+        public Record(string kanji)
+        {
+            Kanji = kanji;
+        }
+
+        public string Kanji { get; }
     }
 }
