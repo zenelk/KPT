@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:KPT/KPT.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:KPTDomain">
+      location = "self:">
    </FileRef>
 </Workspace>

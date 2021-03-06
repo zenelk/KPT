@@ -1,7 +1,8 @@
+import KPTDomainTests
 import XCTest
 
-import KPTDomainTests
+let tests = [
+    KPTDomainTests.allTests()
+]
 
-var tests = [XCTestCaseEntry]()
-tests += KPTDomainTests.allTests()
 XCTMain(tests)
