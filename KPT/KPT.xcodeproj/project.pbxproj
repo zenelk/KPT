@@ -73,11 +73,11 @@
 		1FC4AF3025F314A1005927B2 /* KPT */ = {
 			isa = PBXGroup;
 			children = (
-				1FC4AF3125F314A1005927B2 /* KPTApp.swift */,
-				1FC4AF3325F314A1005927B2 /* ContentView.swift */,
 				1FC4AF3525F314A2005927B2 /* Assets.xcassets */,
+				1FC4AF3325F314A1005927B2 /* ContentView.swift */,
 				1FC4AF3A25F314A2005927B2 /* Info.plist */,
 				1FC4AF3B25F314A2005927B2 /* KPT.entitlements */,
+				1FC4AF3125F314A1005927B2 /* KPTApp.swift */,
 				1FC4AF3725F314A2005927B2 /* Preview Content */,
 			);
 			path = KPT;
