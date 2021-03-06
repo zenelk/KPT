@@ -1,0 +1,1 @@
+- Because of a bug in SPM, coverage is enabled on all targets. This should be set to some targets when the bug is fixed.
