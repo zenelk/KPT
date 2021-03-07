@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1F10474B25F3187900C5CE49 /* KPTDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1F10474A25F3187900C5CE49 /* KPTDomain */; };
 		1FC4AF3225F314A1005927B2 /* KPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4AF3125F314A1005927B2 /* KPTApp.swift */; };
-		1FC4AF3425F314A1005927B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4AF3325F314A1005927B2 /* ContentView.swift */; };
 		1FC4AF3625F314A2005927B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC4AF3525F314A2005927B2 /* Assets.xcassets */; };
 		1FC4AF3925F314A2005927B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC4AF3825F314A2005927B2 /* Preview Assets.xcassets */; };
+		1FE0B68325F57F2E009DEB94 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0B68225F57F2E009DEB94 /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,11 +27,11 @@
 /* Begin PBXFileReference section */
 		1FC4AF2E25F314A1005927B2 /* KPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC4AF3125F314A1005927B2 /* KPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPTApp.swift; sourceTree = "<group>"; };
-		1FC4AF3325F314A1005927B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1FC4AF3525F314A2005927B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC4AF3825F314A2005927B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FC4AF3A25F314A2005927B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC4AF3B25F314A2005927B2 /* KPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KPT.entitlements; sourceTree = "<group>"; };
+		1FE0B68225F57F2E009DEB94 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +74,10 @@
 			isa = PBXGroup;
 			children = (
 				1FC4AF3525F314A2005927B2 /* Assets.xcassets */,
-				1FC4AF3325F314A1005927B2 /* ContentView.swift */,
 				1FC4AF3A25F314A2005927B2 /* Info.plist */,
 				1FC4AF3B25F314A2005927B2 /* KPT.entitlements */,
 				1FC4AF3125F314A1005927B2 /* KPTApp.swift */,
+				1FE0B68225F57F2E009DEB94 /* RootView.swift */,
 				1FC4AF3725F314A2005927B2 /* Preview Content */,
 			);
 			path = KPT;
@@ -185,8 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FC4AF3425F314A1005927B2 /* ContentView.swift in Sources */,
 				1FC4AF3225F314A1005927B2 /* KPTApp.swift in Sources */,
+				1FE0B68325F57F2E009DEB94 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
