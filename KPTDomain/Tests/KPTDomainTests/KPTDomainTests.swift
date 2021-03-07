@@ -16,13 +16,13 @@ final class KPTDomainTests: XCTestCase {
         XCTAssertNil(tracker.nextKanji)
     }
 
-    func test_givenSessionWithOneKanji_whenSessionAdded_thenNextKanjiIsFirstKanjiOfSession() {
+    func test_givenOneKanji_whenSessionAdded_thenNextKanjiIsFirstKanjiOfSession() {
         tracker.addKanji([Constant.KanjiExample.one])
 
         XCTAssertEqual(tracker.nextKanji, Constant.KanjiExample.one)
     }
 
-    func test_givenSessionWithOneKanji_whenKanjiMarkedComplete_thenNextKanjiIsNil() {
+    func test_givenOneKanji_whenKanjiMarkedComplete_thenNextKanjiIsNil() {
         tracker.addKanji([Constant.KanjiExample.one])
 
         tracker.markKanjiComplete()
@@ -30,7 +30,7 @@ final class KPTDomainTests: XCTestCase {
         XCTAssertNil(tracker.nextKanji)
     }
 
-    func test_givenSessionWithTwoKanji_whenKanjiMarkedComplete_thenNextKanjiIsSecondKanji() {
+    func test_givenTwoKanji_whenKanjiMarkedComplete_thenNextKanjiIsSecondKanji() {
         tracker.addKanji([Constant.KanjiExample.one, Constant.KanjiExample.two])
 
         tracker.markKanjiComplete()
