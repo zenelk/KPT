@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "KPTDomain"
-               BuildableName = "KPTDomain"
-               BlueprintName = "KPTDomain"
-               ReferencedContainer = "container:../KPTDomain">
+               BlueprintIdentifier = "1FC4AF2D25F314A1005927B2"
+               BuildableName = "KPT.app"
+               BlueprintName = "KPT"
+               ReferencedContainer = "container:KPT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,24 +28,10 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "KPTDomainTests"
-               BuildableName = "KPTDomainTests"
+               BlueprintIdentifier = "1FE0B69825F580C8009DEB94"
+               BuildableName = "KPTDomainTests.xctest"
                BlueprintName = "KPTDomainTests"
-               ReferencedContainer = "container:../KPTDomain">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1FC4AF2D25F314A1005927B2"
-               BuildableName = "KPT.app"
-               BlueprintName = "KPT"
-               ReferencedContainer = "container:KPT.xcodeproj">
+               ReferencedContainer = "container:../KPTDomain/KPTDomain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -55,21 +41,22 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
       <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "KPTDomain"
-            BuildableName = "KPTDomain"
-            BlueprintName = "KPTDomain"
-            ReferencedContainer = "container:../KPTDomain">
-         </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1FC4AF2D25F314A1005927B2"
             BuildableName = "KPT.app"
             BlueprintName = "KPT"
             ReferencedContainer = "container:KPT.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1FE0B68F25F580C8009DEB94"
+            BuildableName = "KPTDomain.framework"
+            BlueprintName = "KPTDomain"
+            ReferencedContainer = "container:../KPTDomain/KPTDomain.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -78,10 +65,10 @@
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "KPTDomainTests"
-               BuildableName = "KPTDomainTests"
+               BlueprintIdentifier = "1FE0B69825F580C8009DEB94"
+               BuildableName = "KPTDomainTests.xctest"
                BlueprintName = "KPTDomainTests"
-               ReferencedContainer = "container:../KPTDomain">
+               ReferencedContainer = "container:../KPTDomain/KPTDomain.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

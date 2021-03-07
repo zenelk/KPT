@@ -1,1 +1,1 @@
-- Because of a bug in SPM where packages aren't found correctly using "some targets", coverage is enabled on "all targets". This should be set to some targets when the bug is fixed.
+

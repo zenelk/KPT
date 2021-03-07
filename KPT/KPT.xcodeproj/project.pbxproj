@@ -3,28 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F10474B25F3187900C5CE49 /* KPTDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1F10474A25F3187900C5CE49 /* KPTDomain */; };
+		1F86796125F583250081C567 /* KPTDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F86795F25F583200081C567 /* KPTDomain.framework */; };
+		1F86796225F583250081C567 /* KPTDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F86795F25F583200081C567 /* KPTDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FC4AF3225F314A1005927B2 /* KPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4AF3125F314A1005927B2 /* KPTApp.swift */; };
 		1FC4AF3625F314A2005927B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC4AF3525F314A2005927B2 /* Assets.xcassets */; };
 		1FC4AF3925F314A2005927B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC4AF3825F314A2005927B2 /* Preview Assets.xcassets */; };
 		1FE0B68325F57F2E009DEB94 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0B68225F57F2E009DEB94 /* RootView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1F10474625F3180200C5CE49 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FC4AF2625F314A1005927B2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1FC4AF6325F314E6005927B2;
-			remoteInfo = Swiftlint;
+/* Begin PBXCopyFilesBuildPhase section */
+		1F86796325F583250081C567 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F86796225F583250081C567 /* KPTDomain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F86795F25F583200081C567 /* KPTDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KPTDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC4AF2E25F314A1005927B2 /* KPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC4AF3125F314A1005927B2 /* KPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPTApp.swift; sourceTree = "<group>"; };
 		1FC4AF3525F314A2005927B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F10474B25F3187900C5CE49 /* KPTDomain in Frameworks */,
+				1F86796125F583250081C567 /* KPTDomain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,8 +55,20 @@
 		1F10474925F3187900C5CE49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F86795F25F583200081C567 /* KPTDomain.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F86793D25F581AF0081C567 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FC4AF3725F314A2005927B2 /* Preview Content */,
+				1FC4AF3525F314A2005927B2 /* Assets.xcassets */,
+				1FC4AF3A25F314A2005927B2 /* Info.plist */,
+				1FC4AF3B25F314A2005927B2 /* KPT.entitlements */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		1FC4AF2525F314A1005927B2 = {
@@ -73,12 +91,9 @@
 		1FC4AF3025F314A1005927B2 /* KPT */ = {
 			isa = PBXGroup;
 			children = (
-				1FC4AF3525F314A2005927B2 /* Assets.xcassets */,
-				1FC4AF3A25F314A2005927B2 /* Info.plist */,
-				1FC4AF3B25F314A2005927B2 /* KPT.entitlements */,
+				1F86793D25F581AF0081C567 /* Resources */,
 				1FC4AF3125F314A1005927B2 /* KPTApp.swift */,
 				1FE0B68225F57F2E009DEB94 /* RootView.swift */,
-				1FC4AF3725F314A2005927B2 /* Preview Content */,
 			);
 			path = KPT;
 			sourceTree = "<group>";
@@ -93,23 +108,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXLegacyTarget section */
-		1FC4AF6325F314E6005927B2 /* Swiftlint */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = ..;
-			buildConfigurationList = 1FC4AF6625F314E6005927B2 /* Build configuration list for PBXLegacyTarget "Swiftlint" */;
-			buildPhases = (
-			);
-			buildToolPath = /usr/local/bin/swiftlint;
-			buildWorkingDirectory = "";
-			dependencies = (
-			);
-			name = Swiftlint;
-			passBuildSettingsInEnvironment = 0;
-			productName = RunSwiftlint;
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
 		1FC4AF2D25F314A1005927B2 /* KPT */ = {
 			isa = PBXNativeTarget;
@@ -118,15 +116,15 @@
 				1FC4AF2A25F314A1005927B2 /* Sources */,
 				1FC4AF2B25F314A1005927B2 /* Frameworks */,
 				1FC4AF2C25F314A1005927B2 /* Resources */,
+				1F86795125F582610081C567 /* Swiftlint */,
+				1F86796325F583250081C567 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1F10474725F3180200C5CE49 /* PBXTargetDependency */,
 			);
 			name = KPT;
 			packageProductDependencies = (
-				1F10474A25F3187900C5CE49 /* KPTDomain */,
 			);
 			productName = KPT;
 			productReference = 1FC4AF2E25F314A1005927B2 /* KPT.app */;
@@ -142,9 +140,6 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					1FC4AF2D25F314A1005927B2 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					1FC4AF6325F314E6005927B2 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -163,7 +158,6 @@
 			projectRoot = "";
 			targets = (
 				1FC4AF2D25F314A1005927B2 /* KPT */,
-				1FC4AF6325F314E6005927B2 /* Swiftlint */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +174,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F86795125F582610081C567 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/swiftlint --config ../.swiftlint.yml .\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1FC4AF2A25F314A1005927B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -191,14 +206,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1F10474725F3180200C5CE49 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1FC4AF6325F314E6005927B2 /* Swiftlint */;
-			targetProxy = 1F10474625F3180200C5CE49 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1FC4AF5225F314A2005927B2 /* Debug */ = {
@@ -321,17 +328,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = KPT/KPT.entitlements;
+				CODE_SIGN_ENTITLEMENTS = KPT/Resources/KPT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"KPT/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"KPT/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = KPT/Info.plist;
+				INFOPLIST_FILE = KPT/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zenel.KPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -343,45 +350,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = KPT/KPT.entitlements;
+				CODE_SIGN_ENTITLEMENTS = KPT/Resources/KPT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"KPT/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"KPT/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = KPT/Info.plist;
+				INFOPLIST_FILE = KPT/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zenel.KPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		1FC4AF6425F314E6005927B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEBUGGING_SYMBOLS = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		1FC4AF6525F314E6005927B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -406,23 +388,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FC4AF6625F314E6005927B2 /* Build configuration list for PBXLegacyTarget "Swiftlint" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FC4AF6425F314E6005927B2 /* Debug */,
-				1FC4AF6525F314E6005927B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1F10474A25F3187900C5CE49 /* KPTDomain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = KPTDomain;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FC4AF2625F314A1005927B2 /* Project object */;
 }

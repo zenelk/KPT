@@ -8,6 +8,6 @@
       location = "group:KPT/KPT.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:KPTDomain">
+      location = "group:KPTDomain/KPTDomain.xcodeproj">
    </FileRef>
 </Workspace>
