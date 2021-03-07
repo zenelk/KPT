@@ -4,24 +4,35 @@ import KPTDomain
 class RootViewController: NSViewController {
     var tracker: KanjiPracticeTracker!
 
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-
     @IBOutlet private weak var kanjiView: NSTextField!
 
-    @IBAction private func onStrokeOrderClicked(_ sender: NSButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tracker.addKanji("１２３４５")
+
+        updateCurrentKanji()
     }
 
-    @IBAction private func onReadingsClicked(_ sender: NSButton) {
+    private func updateCurrentKanji() {
+        let nextValue: String
+        if let nextKanji = tracker.nextKanji {
+            nextValue = String(nextKanji)
+        } else {
+            nextValue = ""
+        }
+        kanjiView.stringValue = nextValue
     }
+}
 
-    @IBAction private func onReAddToQueueClicked(_ sender: NSButton) {
-    }
+extension RootViewController {
+    @IBAction private func onStrokeOrderClicked(_ sender: NSButton) { }
 
-    @IBAction private func onMarkCompletedClicked(_ sender: NSButton) {
-    }
+    @IBAction private func onReadingsClicked(_ sender: NSButton) { }
 
-    @IBAction private func addEntryClicked(_ sender: NSButton) {
-    }
+    @IBAction private func onReAddToQueueClicked(_ sender: NSButton) { }
+
+    @IBAction private func onMarkCompletedClicked(_ sender: NSButton) { }
+
+    @IBAction private func addEntryClicked(_ sender: NSButton) { }
 }

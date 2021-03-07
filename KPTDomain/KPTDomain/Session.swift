@@ -6,15 +6,15 @@ class Session {
     private var currentCompletedIndex = 0
 
     private let date: Date
-    private let kanji: [String]
+    private let kanji: String
 
-    var nextKanji: String? {
+    var nextKanji: Character? {
         complete
             ? nil
-            : kanji[currentCompletedIndex]
+            : kanji[kanji.index(kanji.startIndex, offsetBy: currentCompletedIndex)]
     }
 
-    init(date: Date, kanji: [String]) {
+    init(date: Date, kanji: String) {
         self.date = date
         self.kanji = kanji
     }
