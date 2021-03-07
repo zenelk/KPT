@@ -37,4 +37,13 @@ final class KPTDomainTests: XCTestCase {
 
         XCTAssertEqual(tracker.nextKanji, Constant.KanjiExample.two)
     }
+
+    func test_givenTwoEntries_whenKanjiMarkedComplete_thenNextKanjiIsKanjiOfSecondEntry() {
+        tracker.addKanji([Constant.KanjiExample.one])
+        tracker.addKanji([Constant.KanjiExample.two])
+
+        tracker.markKanjiComplete()
+
+        XCTAssertEqual(tracker.nextKanji, Constant.KanjiExample.two)
+    }
 }

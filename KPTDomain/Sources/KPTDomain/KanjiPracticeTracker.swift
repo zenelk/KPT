@@ -1,8 +1,9 @@
 import Foundation
 
 class KanjiPracticeTracker {
-    var nextKanji: String? { cache.first?.nextKanji }
+    var nextKanji: String? { nextIncompleteSession?.nextKanji }
 
+    private var nextIncompleteSession: Session? { cache.first { !$0.complete } }
     private var cache: [Session] = []
 
     func addKanji(_ kanji: [String]) {
@@ -10,6 +11,6 @@ class KanjiPracticeTracker {
     }
 
     func markKanjiComplete() {
-        cache.first?.markKanjiComplete()
+        nextIncompleteSession?.markKanjiComplete()
     }
 }

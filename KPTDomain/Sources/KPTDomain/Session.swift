@@ -1,15 +1,17 @@
 import Foundation
 
 class Session {
+    var complete: Bool { kanji.count <= currentCompletedIndex }
+
     private var currentCompletedIndex = 0
 
     private let date: Date
     private let kanji: [String]
 
     var nextKanji: String? {
-         kanji.count > currentCompletedIndex
-            ? kanji[currentCompletedIndex]
-            : nil
+        complete
+            ? nil
+            : kanji[currentCompletedIndex]
     }
 
     init(date: Date, kanji: [String]) {
