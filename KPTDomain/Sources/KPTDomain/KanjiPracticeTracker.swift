@@ -1,11 +1,15 @@
 import Foundation
 
 class KanjiPracticeTracker {
-    var nextKanji: String? { cache.first?.kanji.first }
+    var nextKanji: String? { cache.first?.nextKanji }
 
     private var cache: [Session] = []
 
-    func addSession(_ session: Session) {
-        cache += [session]
+    func addKanji(_ kanji: [String]) {
+        cache += [Session(date: Date(), kanji: kanji)]
+    }
+
+    func markKanjiComplete() {
+        cache.first?.markKanjiComplete()
     }
 }

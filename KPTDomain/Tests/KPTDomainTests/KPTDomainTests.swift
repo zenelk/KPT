@@ -4,29 +4,37 @@ import XCTest
 
 final class KPTDomainTests: XCTestCase {
     private enum Constant {
-        static let goodKanji = "良"
+        enum KanjiExample {
+            static let one = "一"
+            static let two = "二"
+        }
     }
-
-    static var all = [
-        (
-            "test_givenNewTracker_whenSessionAdded_thenNextKanjiIsFirstKanjiOfSession",
-            test_givenNewTracker_whenSessionAdded_thenNextKanjiIsFirstKanjiOfSession
-        ),
-        (
-            "test_givenNewTracker_thenNextKanjiIsNil",
-            test_givenNewTracker_thenNextKanjiIsNil
-        )
-    ]
 
     private let tracker = KanjiPracticeTracker()
 
-    func test_givenNewTracker_whenSessionAdded_thenNextKanjiIsFirstKanjiOfSession() {
-        tracker.addSession(Session(date: Date(), kanji: [Constant.goodKanji]))
-
-        XCTAssertEqual(tracker.nextKanji, Constant.goodKanji)
-    }
-
     func test_givenNewTracker_thenNextKanjiIsNil() {
         XCTAssertNil(tracker.nextKanji)
+    }
+
+    func test_givenSessionWithOneKanji_whenSessionAdded_thenNextKanjiIsFirstKanjiOfSession() {
+        tracker.addKanji([Constant.KanjiExample.one])
+
+        XCTAssertEqual(tracker.nextKanji, Constant.KanjiExample.one)
+    }
+
+    func test_givenSessionWithOneKanji_whenKanjiMarkedComplete_thenNextKanjiIsNil() {
+        tracker.addKanji([Constant.KanjiExample.one])
+
+        tracker.markKanjiComplete()
+
+        XCTAssertNil(tracker.nextKanji)
+    }
+
+    func test_givenSessionWithTwoKanji_whenKanjiMarkedComplete_thenNextKanjiIsSecondKanji() {
+        tracker.addKanji([Constant.KanjiExample.one, Constant.KanjiExample.two])
+
+        tracker.markKanjiComplete()
+
+        XCTAssertEqual(tracker.nextKanji, Constant.KanjiExample.two)
     }
 }
