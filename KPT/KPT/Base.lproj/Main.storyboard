@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="KPT" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -700,18 +702,123 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="RootViewController" customModule="KPT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="721" height="572"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="00G-IP-c1d">
+                                <rect key="frame" x="20" y="21" width="530" height="530"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="500" id="MGB-Iw-OVR"/>
+                                    <constraint firstAttribute="width" secondItem="00G-IP-c1d" secondAttribute="height" multiplier="1:1" id="MOZ-5Q-hdA"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" alignment="center" placeholderString="無" drawsBackground="YES" id="sum-I2-efz">
+                                    <font key="font" metaFont="system" size="450"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-py-YpC">
+                                <rect key="frame" x="570" y="427" width="131" height="104"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nP4-KW-4HO">
+                                        <rect key="frame" x="-7" y="77" width="145" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Stroke Order" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bOf-bU-9zM">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="onStrokeOrderClicked:" target="XfG-lQ-9wD" id="MfK-3Z-jmC"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sc8-q2-T2l">
+                                        <rect key="frame" x="-7" y="49" width="145" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Readings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0HW-Fl-dJ5">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="onReadingsClicked:" target="XfG-lQ-9wD" id="3FB-17-tfi"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5v9-LJ-BF8">
+                                        <rect key="frame" x="-7" y="21" width="145" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Re-Add to Queue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gtX-Cg-kHM">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="onReAddToQueueClicked:" target="XfG-lQ-9wD" id="Jrm-Rp-F9N"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QAs-2b-eWh">
+                                        <rect key="frame" x="-7" y="-7" width="145" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Mark Completed" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="l2r-jf-i2k">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="onMarkCompletedClicked:" target="XfG-lQ-9wD" id="i25-iU-Zqf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Sc8-q2-T2l" secondAttribute="trailing" id="3GU-to-Lfj"/>
+                                    <constraint firstAttribute="trailing" secondItem="nP4-KW-4HO" secondAttribute="trailing" id="Clq-eI-kPj"/>
+                                    <constraint firstAttribute="trailing" secondItem="5v9-LJ-BF8" secondAttribute="trailing" id="RTM-1m-mxt"/>
+                                    <constraint firstAttribute="trailing" secondItem="QAs-2b-eWh" secondAttribute="trailing" id="b27-RO-7gj"/>
+                                    <constraint firstItem="nP4-KW-4HO" firstAttribute="leading" secondItem="vLj-py-YpC" secondAttribute="leading" id="dNQ-4H-vTU"/>
+                                    <constraint firstItem="Sc8-q2-T2l" firstAttribute="leading" secondItem="vLj-py-YpC" secondAttribute="leading" id="hWM-qB-SrR"/>
+                                    <constraint firstItem="5v9-LJ-BF8" firstAttribute="leading" secondItem="vLj-py-YpC" secondAttribute="leading" id="vDd-6p-gmw"/>
+                                    <constraint firstItem="QAs-2b-eWh" firstAttribute="leading" secondItem="vLj-py-YpC" secondAttribute="leading" id="vax-D8-fLt"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGM-pe-tig">
+                                <rect key="frame" x="563" y="34" width="145" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add Entry" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fnJ-1u-fdX">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addEntryClicked:" target="XfG-lQ-9wD" id="W88-Gz-F0u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vLj-py-YpC" secondAttribute="trailing" constant="20" id="8fg-Oy-rRm"/>
+                            <constraint firstItem="vLj-py-YpC" firstAttribute="top" secondItem="00G-IP-c1d" secondAttribute="top" constant="20" id="9wh-aK-Nci"/>
+                            <constraint firstItem="00G-IP-c1d" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="21" id="NUx-kr-f5v"/>
+                            <constraint firstItem="SGM-pe-tig" firstAttribute="trailing" secondItem="vLj-py-YpC" secondAttribute="trailing" id="Y20-tK-wrv"/>
+                            <constraint firstItem="SGM-pe-tig" firstAttribute="leading" secondItem="vLj-py-YpC" secondAttribute="leading" id="Y4l-ru-Rhl"/>
+                            <constraint firstItem="SGM-pe-tig" firstAttribute="bottom" secondItem="00G-IP-c1d" secondAttribute="bottom" constant="-20" id="YlW-yD-xhN"/>
+                            <constraint firstItem="00G-IP-c1d" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="erz-jF-mZA"/>
+                            <constraint firstItem="00G-IP-c1d" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="sla-vg-fOL"/>
+                            <constraint firstItem="vLj-py-YpC" firstAttribute="leading" secondItem="00G-IP-c1d" secondAttribute="trailing" constant="20" id="v3F-vd-9x8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="kanjiView" destination="00G-IP-c1d" id="CF7-rM-gbM"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="76" y="878"/>
         </scene>
     </scenes>
 </document>

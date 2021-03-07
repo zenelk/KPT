@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1F5BB93425F58DBC001D24FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BB93325F58DBC001D24FD /* AppDelegate.swift */; };
-		1F5BB93625F58DBC001D24FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BB93525F58DBC001D24FD /* ViewController.swift */; };
+		1F5BB93625F58DBC001D24FD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BB93525F58DBC001D24FD /* RootViewController.swift */; };
 		1F5BB93825F58DBC001D24FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5BB93725F58DBC001D24FD /* Assets.xcassets */; };
 		1F5BB93B25F58DBC001D24FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5BB93925F58DBC001D24FD /* Main.storyboard */; };
 		1F5BB97025F58E17001D24FD /* KPTDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BB96F25F58E17001D24FD /* KPTDomain.framework */; };
 		1F5BB97125F58E17001D24FD /* KPTDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BB96F25F58E17001D24FD /* KPTDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F5BB97825F59854001D24FD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BB97725F59854001D24FD /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,12 +33,13 @@
 /* Begin PBXFileReference section */
 		1F5BB93025F58DBC001D24FD /* KPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5BB93325F58DBC001D24FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F5BB93525F58DBC001D24FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F5BB93525F58DBC001D24FD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1F5BB93725F58DBC001D24FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F5BB93A25F58DBC001D24FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F5BB93C25F58DBC001D24FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F5BB93D25F58DBC001D24FD /* KPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KPT.entitlements; sourceTree = "<group>"; };
 		1F5BB96F25F58E17001D24FD /* KPTDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KPTDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5BB97725F59854001D24FD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +76,8 @@
 			children = (
 				1F5BB96525F58DDB001D24FD /* Resources */,
 				1F5BB93325F58DBC001D24FD /* AppDelegate.swift */,
-				1F5BB93525F58DBC001D24FD /* ViewController.swift */,
 				1F5BB93925F58DBC001D24FD /* Main.storyboard */,
+				1F5BB93525F58DBC001D24FD /* RootViewController.swift */,
 			);
 			path = KPT;
 			sourceTree = "<group>";
@@ -86,6 +88,7 @@
 				1F5BB93725F58DBC001D24FD /* Assets.xcassets */,
 				1F5BB93C25F58DBC001D24FD /* Info.plist */,
 				1F5BB93D25F58DBC001D24FD /* KPT.entitlements */,
+				1F5BB97725F59854001D24FD /* main.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,8 +193,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5BB93625F58DBC001D24FD /* ViewController.swift in Sources */,
+				1F5BB93625F58DBC001D24FD /* RootViewController.swift in Sources */,
 				1F5BB93425F58DBC001D24FD /* AppDelegate.swift in Sources */,
+				1F5BB97825F59854001D24FD /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
