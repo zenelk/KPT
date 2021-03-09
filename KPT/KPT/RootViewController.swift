@@ -8,7 +8,7 @@ class RootViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tracker.addKanji("１２３４５")
 
         updateCurrentKanji()
@@ -35,4 +35,6 @@ extension RootViewController {
     @IBAction private func onMarkCompletedClicked(_ sender: NSButton) { }
 
     @IBAction private func addEntryClicked(_ sender: NSButton) { }
+
+    @IBAction private func onUseHandwritingFontToggled(_ sender: NSButton) { }
 }
